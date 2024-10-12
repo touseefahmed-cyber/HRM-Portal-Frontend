@@ -956,8 +956,11 @@ ul.notification-list {
 }
 @media screen and (max-width: 767px) {
   .search-employee-box ul {
-    grid-template-columns: 47.5% 47.5%;
+    grid-template-columns: 47.6% 47.6%;
   }
+  select#mySelect {
+    height: 45px;
+}
   .login-form-con {
     padding: 0 15px;
   }
