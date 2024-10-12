@@ -18,3 +18,8 @@ document.querySelectorAll('[data-bs-toggle="popover"]')
 $(document).ready(function() {
   $('#mySelect').select2();
 });
+// 
+document.getElementById('mobile_btn').addEventListener('click', function() {
+  const sidebarMenu = document.getElementById('sidebar-menu');
+  sidebarMenu.classList.toggle('menu-active'); // Add or remove 'active' class
+});

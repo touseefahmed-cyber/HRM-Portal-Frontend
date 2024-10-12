@@ -13,6 +13,7 @@
       <!-- DASHBOARD -->
       <div class="dashboard-header w-100 float-start">
          <div class="dashboard-header-box">
+            <a id="mobile_btn" class="mobile_btn d-lg-none" href="javascript:void(0)"><i class="fa-solid fa-bars"></i></a>
             <div class="header-logo">
                <figure class="mb-0">
                   <img src="images/topboffin-white-logo.svg" alt="topboffin-white-logo">
@@ -27,8 +28,150 @@
                         <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                      </form>
                   </li>
-                  <li class="position-relative nav-link"><small class="d-inline-block">3</small><i class="fa-regular fa-bell"></i></li>
-                  <li class="position-relative nav-link"><small class="d-inline-block">3</small><i class="fa-regular fa-comment"></i></li>
+                  <li class="position-relative nav-link">
+                      <small class="d-inline-block">3</small>
+                      <a href="javascript:;" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                         <i class="fa-regular fa-bell"></i>
+                      </a>
+                      <div class="dropdown-menu notifications">
+                        <div class="topnav-dropdown-header"><span class="notification-title">Notifications</span><a href="javascript:void(0)" class="clear-noti"> Clear All </a></div>
+                        <div class="noti-content">
+                           <ul class="notification-list">
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                       <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
+                                          <p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                        <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">Tarah Shropshire</span> changed the task name <span class="noti-title">Appointment booking with payment gateway</span></p>
+                                          <p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                        <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">Misty Tison</span> added <span class="noti-title">Domenic Houston</span> and <span class="noti-title">Claire Mapes</span> to project <span class="noti-title">Doctor available module</span></p>
+                                          <p class="noti-time"><span class="notification-time">8 mins ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                        <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">Rolland Webber</span> completed task <span class="noti-title">Patient and Doctor video conferencing</span></p>
+                                          <p class="noti-time"><span class="notification-time">12 mins ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                        <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">Bernardo Galaviz</span> added new task <span class="noti-title">Private chat module</span></p>
+                                          <p class="noti-time"><span class="notification-time">2 days ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="topnav-dropdown-footer"><a href="#">View all Notifications</a></div>
+                     </div>
+                   </li>
+                  <li class="position-relative nav-link">
+                    <small class="d-inline-block">3</small>
+                    <a href="javascript:;" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-comment"></i></a>
+                        <div class="dropdown-menu notifications" data-popper-placement="bottom-end">
+                            <div class="topnav-dropdown-header"><span class="notification-title">Messages</span><a href="javascript:void(0)" class="clear-noti"> Clear All </a></div>
+                            <div class="noti-content">
+                               <ul class="notification-list">
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left">
+                                            <figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure>
+                                            </div>
+                                           <div class="list-body">
+                                              <span class="message-author">Richard Miles </span><span class="message-time">12:28 AM</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left"><figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure></div>
+                                           <div class="list-body">
+                                              <span class="message-author">John Doe</span><span class="message-time">6 Mar</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left"><figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure></div>
+                                           <div class="list-body">
+                                              <span class="message-author"> Tarah Shropshire </span><span class="message-time">5 Mar</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left"><figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure></div>
+                                           <div class="list-body">
+                                              <span class="message-author">Mike Litorus</span><span class="message-time">3 Mar</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left"><figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure></div>
+                                           <div class="list-body">
+                                              <span class="message-author"> Catherine Manseau </span><span class="message-time">27 Feb</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                               </ul>
+                            </div>
+                            <div class="topnav-dropdown-footer"><a href="#">View all Messages</a></div>
+                         </div>
+                    </li>
                   <li class="nav-item dropdown">
                      <a class="dropdown-toggle person-name" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                         <div class="user-img position-relative">
@@ -95,7 +238,7 @@
                             </ol>
                     </div>
                     <div class="add-employee">
-                        <a href="#"><i class="fa-solid fa-plus"></i> add Employee</a>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add_employee"><i class="fa-solid fa-plus"></i> add Employee</a>
                         <!-- add-employee -->
                     </div>
                     <!-- content-header -->
@@ -334,6 +477,297 @@
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
       <script type="module" src="js/main.js"></script>
-      
    </body>
+   <div id="add_employee" class="modal custom-modal fade" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title">Add Employee</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+             <form>
+                <div class="row">
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">First Name <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text">
+                       </div>
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Last Name</label>
+                        <input class="form-control" type="text">
+                      </div>
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Username <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text">
+                      </div>
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Email <span class="text-danger">*</span></label>
+                        <input class="form-control" type="email">
+                       </div>
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Password</label>
+                        <input class="form-control" type="password">
+                       </div>
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Confirm Password</label>
+                        <input class="form-control" type="password">
+                       </div>
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control">
+                       </div>
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3">
+                         <label class="col-form-label">Joining Date <span class="text-danger">*</span></label>
+                         <div class="cal-icon">
+                            <div class="v3dp__datepicker">
+                               <div class="v3dp__input_wrapper">
+                                  <input type="text" readonly="" class="form-control datetimepicker" editable="true" placeholder="Choose Date" tabindex="0">
+                                  <div class="v3dp__clearable" style="display: none;"><i>x</i></div>
+                               </div>
+                               <div data-v-65eb861b="" class="v3dp__popout v3dp__popout-year" style="--popout-column-definition: repeat(3, 1fr); display: none;">
+                                  <div data-v-65eb861b="" class="v3dp__heading">
+                                     <button data-v-65eb861b="" class="v3dp__heading__button v3dp__heading__button__left">
+                                        <svg data-v-65eb861b="" class="v3dp__heading__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 8">
+                                           <g data-v-65eb861b="" fill="none" fill-rule="evenodd">
+                                              <path data-v-65eb861b="" stroke="none" d="M-9 16V-8h24v24z"></path>
+                                              <path data-v-65eb861b="" stroke-linecap="round" stroke-linejoin="round" d="M5 0L1 4l4 4"></path>
+                                           </g>
+                                        </svg>
+                                     </button>
+                                     <span data-v-65eb861b="" class="v3dp__heading__center">2020 - 2029</span>
+                                     <button data-v-65eb861b="" class="v3dp__heading__button v3dp__heading__button__right">
+                                        <svg data-v-65eb861b="" class="v3dp__heading__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 8">
+                                           <g data-v-65eb861b="" fill="none" fill-rule="evenodd">
+                                              <path data-v-65eb861b="" stroke="none" d="M15-8v24H-9V-8z"></path>
+                                              <path data-v-65eb861b="" stroke-linecap="round" stroke-linejoin="round" d="M1 8l4-4-4-4"></path>
+                                           </g>
+                                        </svg>
+                                     </button>
+                                  </div>
+                                  <div data-v-65eb861b="" class="v3dp__body">
+                                     <!---->
+                                     <div data-v-65eb861b="" class="v3dp__elements"><button data-v-65eb861b="" class="v3dp__element__button__year"><span data-v-65eb861b="">2020</span></button><button data-v-65eb861b="" class="v3dp__element__button__year"><span data-v-65eb861b="">2021</span></button><button data-v-65eb861b="" class="v3dp__element__button__year"><span data-v-65eb861b="">2022</span></button><button data-v-65eb861b="" class="v3dp__element__button__year"><span data-v-65eb861b="">2023</span></button><button data-v-65eb861b="" class="selected v3dp__element__button__year"><span data-v-65eb861b="">2024</span></button><button data-v-65eb861b="" class="v3dp__element__button__year"><span data-v-65eb861b="">2025</span></button><button data-v-65eb861b="" class="v3dp__element__button__year"><span data-v-65eb861b="">2026</span></button><button data-v-65eb861b="" class="v3dp__element__button__year"><span data-v-65eb861b="">2027</span></button><button data-v-65eb861b="" class="v3dp__element__button__year"><span data-v-65eb861b="">2028</span></button><button data-v-65eb861b="" class="v3dp__element__button__year"><span data-v-65eb861b="">2029</span></button></div>
+                                  </div>
+                               </div>
+                               <div data-v-65eb861b="" class="v3dp__popout v3dp__popout-month" style="--popout-column-definition: repeat(3, 1fr); display: none;">
+                                  <div data-v-65eb861b="" class="v3dp__heading">
+                                     <button data-v-65eb861b="" class="v3dp__heading__button v3dp__heading__button__left">
+                                        <svg data-v-65eb861b="" class="v3dp__heading__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 8">
+                                           <g data-v-65eb861b="" fill="none" fill-rule="evenodd">
+                                              <path data-v-65eb861b="" stroke="none" d="M-9 16V-8h24v24z"></path>
+                                              <path data-v-65eb861b="" stroke-linecap="round" stroke-linejoin="round" d="M5 0L1 4l4 4"></path>
+                                           </g>
+                                        </svg>
+                                     </button>
+                                     <button data-v-65eb861b="" class="v3dp__heading__center">2024</button>
+                                     <button data-v-65eb861b="" class="v3dp__heading__button v3dp__heading__button__right">
+                                        <svg data-v-65eb861b="" class="v3dp__heading__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 8">
+                                           <g data-v-65eb861b="" fill="none" fill-rule="evenodd">
+                                              <path data-v-65eb861b="" stroke="none" d="M15-8v24H-9V-8z"></path>
+                                              <path data-v-65eb861b="" stroke-linecap="round" stroke-linejoin="round" d="M1 8l4-4-4-4"></path>
+                                           </g>
+                                        </svg>
+                                     </button>
+                                  </div>
+                                  <div data-v-65eb861b="" class="v3dp__body">
+                                     <!---->
+                                     <div data-v-65eb861b="" class="v3dp__elements"><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Jan</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Feb</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Mar</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Apr</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">May</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Jun</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Jul</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Aug</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Sep</span></button><button data-v-65eb861b="" class="selected v3dp__element__button__month"><span data-v-65eb861b="">Oct</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Nov</span></button><button data-v-65eb861b="" class="v3dp__element__button__month"><span data-v-65eb861b="">Dec</span></button></div>
+                                  </div>
+                               </div>
+                               <div data-v-65eb861b="" class="v3dp__popout v3dp__popout-day" style="--popout-column-definition: repeat(7, 1fr); display: none;">
+                                  <div data-v-65eb861b="" class="v3dp__heading">
+                                     <button data-v-65eb861b="" class="v3dp__heading__button v3dp__heading__button__left">
+                                        <svg data-v-65eb861b="" class="v3dp__heading__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 8">
+                                           <g data-v-65eb861b="" fill="none" fill-rule="evenodd">
+                                              <path data-v-65eb861b="" stroke="none" d="M-9 16V-8h24v24z"></path>
+                                              <path data-v-65eb861b="" stroke-linecap="round" stroke-linejoin="round" d="M5 0L1 4l4 4"></path>
+                                           </g>
+                                        </svg>
+                                     </button>
+                                     <button data-v-65eb861b="" class="v3dp__heading__center">October 2024</button>
+                                     <button data-v-65eb861b="" class="v3dp__heading__button v3dp__heading__button__right">
+                                        <svg data-v-65eb861b="" class="v3dp__heading__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 8">
+                                           <g data-v-65eb861b="" fill="none" fill-rule="evenodd">
+                                              <path data-v-65eb861b="" stroke="none" d="M15-8v24H-9V-8z"></path>
+                                              <path data-v-65eb861b="" stroke-linecap="round" stroke-linejoin="round" d="M1 8l4-4-4-4"></path>
+                                           </g>
+                                        </svg>
+                                     </button>
+                                  </div>
+                                  <div data-v-65eb861b="" class="v3dp__body">
+                                     <div data-v-65eb861b="" class="v3dp__subheading"><span class="v3dp__subheading__weekday__0">Mon</span><span class="v3dp__subheading__weekday__1">Tue</span><span class="v3dp__subheading__weekday__2">Wed</span><span class="v3dp__subheading__weekday__3">Thu</span><span class="v3dp__subheading__weekday__4">Fri</span><span class="v3dp__subheading__weekday__5">Sat</span><span class="v3dp__subheading__weekday__6">Sun</span></div>
+                                     <hr data-v-65eb861b="" class="v3dp__divider">
+                                     <div data-v-65eb861b="" class="v3dp__elements"><button data-v-65eb861b="" disabled="" class="v3dp__element__button__day"><span data-v-65eb861b="">30</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">01</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">02</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">03</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">04</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">05</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">06</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">07</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">08</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">09</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">10</span></button><button data-v-65eb861b="" class="selected current v3dp__element__button__day"><span data-v-65eb861b="">11</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">12</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">13</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">14</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">15</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">16</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">17</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">18</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">19</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">20</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">21</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">22</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">23</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">24</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">25</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">26</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">27</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">28</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">29</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">30</span></button><button data-v-65eb861b="" class="v3dp__element__button__day"><span data-v-65eb861b="">31</span></button><button data-v-65eb861b="" disabled="" class="v3dp__element__button__day"><span data-v-65eb861b="">01</span></button><button data-v-65eb861b="" disabled="" class="v3dp__element__button__day"><span data-v-65eb861b="">02</span></button><button data-v-65eb861b="" disabled="" class="v3dp__element__button__day"><span data-v-65eb861b="">03</span></button></div>
+                                  </div>
+                               </div>
+                               <div data-v-65eb861b="" data-v-81ac698d="" class="v3dp__popout v3dp__popout-time" style="--popout-column-definition: repeat(2, 1fr); display: none;">
+                                  <div data-v-65eb861b="" class="v3dp__heading">
+                                     <button data-v-65eb861b="" class="v3dp__heading__button v3dp__heading__button__left" disabled="">
+                                        <svg data-v-65eb861b="" class="v3dp__heading__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 8">
+                                           <g data-v-65eb861b="" fill="none" fill-rule="evenodd">
+                                              <path data-v-65eb861b="" stroke="none" d="M-9 16V-8h24v24z"></path>
+                                              <path data-v-65eb861b="" stroke-linecap="round" stroke-linejoin="round" d="M5 0L1 4l4 4"></path>
+                                           </g>
+                                        </svg>
+                                     </button>
+                                     <button data-v-65eb861b="" class="v3dp__heading__center">22:20</button>
+                                     <button data-v-65eb861b="" class="v3dp__heading__button v3dp__heading__button__right" disabled="">
+                                        <svg data-v-65eb861b="" class="v3dp__heading__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 8">
+                                           <g data-v-65eb861b="" fill="none" fill-rule="evenodd">
+                                              <path data-v-65eb861b="" stroke="none" d="M15-8v24H-9V-8z"></path>
+                                              <path data-v-65eb861b="" stroke-linecap="round" stroke-linejoin="round" d="M1 8l4-4-4-4"></path>
+                                           </g>
+                                        </svg>
+                                     </button>
+                                  </div>
+                                  <div data-v-65eb861b="" class="v3dp__body">
+                                     <!---->
+                                     <div data-v-65eb861b="" class="v3dp__elements">
+                                        <div data-v-81ac698d="" class="v3dp__column"><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">00</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">01</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">02</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">03</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">04</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">05</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">06</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">07</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">08</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">09</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">10</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">11</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">12</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">13</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">14</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">15</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">16</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">17</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">18</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">19</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">20</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">21</span></button><button data-v-81ac698d="" class="selected v3dp__element_button__hour"><span data-v-81ac698d="">22</span></button><button data-v-81ac698d="" class="v3dp__element_button__hour"><span data-v-81ac698d="">23</span></button></div>
+                                        <div data-v-81ac698d="" class="v3dp__column"><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">00</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">01</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">02</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">03</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">04</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">05</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">06</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">07</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">08</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">09</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">10</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">11</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">12</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">13</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">14</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">15</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">16</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">17</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">18</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">19</span></button><button data-v-81ac698d="" class="selected v3dp__element_button__minute"><span data-v-81ac698d="">20</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">21</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">22</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">23</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">24</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">25</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">26</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">27</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">28</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">29</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">30</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">31</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">32</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">33</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">34</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">35</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">36</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">37</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">38</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">39</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">40</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">41</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">42</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">43</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">44</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">45</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">46</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">47</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">48</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">49</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">50</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">51</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">52</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">53</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">54</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">55</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">56</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">57</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">58</span></button><button data-v-81ac698d="" class="v3dp__element_button__minute"><span data-v-81ac698d="">59</span></button></div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3"><label class="col-form-label">Phone </label>
+                        <input class="form-control" type="text">
+                    </div>
+                   </div>
+                   <div class="col-sm-6">
+                      <div class="input-block mb-3">
+                         <label class="col-form-label">Company</label>
+                         <div>
+                            <select class="form-control select2-hidden-accessible" id="company" name="" data-select2-id="company" tabindex="-1" aria-hidden="true">
+                               <option value="Global Technologies" data-select2-id="8">Global Technologies</option>
+                               <option value="Delta Infotech" data-select2-id="9">Delta Infotech</option>
+                            </select>
+                            <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="7" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-company-container"><span class="select2-selection__rendered" id="select2-company-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Global Technologies</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-md-6">
+                      <div class="input-block mb-3">
+                         <label class="col-form-label">Department <span class="text-danger">*</span></label>
+                         <div>
+                            <select class="form-control select2-hidden-accessible" id="department-select" name="" data-select2-id="department-select" tabindex="-1" aria-hidden="true">
+                               <option value="Select Department" data-select2-id="11">Select Department</option>
+                               <option value="Web Development" data-select2-id="12">Web Development</option>
+                               <option value="IT Management" data-select2-id="13">IT Management</option>
+                               <option value="Marketing" data-select2-id="14">Marketing</option>
+                            </select>
+                            <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="10" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-department-select-container"><span class="select2-selection__rendered" id="select2-department-select-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select Department</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-md-6">
+                      <div class="input-block mb-3">
+                         <label class="col-form-label">Designation <span class="text-danger">*</span></label>
+                         <div>
+                            <select class="form-control select2-hidden-accessible" id="android" name="" data-select2-id="android" tabindex="-1" aria-hidden="true">
+                               <option value="Select Designation" data-select2-id="16">Select Designation</option>
+                               <option value="Web Designer" data-select2-id="17">Web Designer</option>
+                               <option value="Web Developer" data-select2-id="18">Web Developer</option>
+                               <option value="Android Developer" data-select2-id="19">Android Developer</option>
+                            </select>
+                            <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="15" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-android-container"><span class="select2-selection__rendered" id="select2-android-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select Designation</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="table-responsive">
+                   <table class="table table-striped custom-table">
+                      <thead>
+                         <tr>
+                            <th>Module Permission</th>
+                            <th class="text-center">Read</th>
+                            <th class="text-center">Write</th>
+                            <th class="text-center">Create</th>
+                            <th class="text-center">Delete</th>
+                            <th class="text-center">Import</th>
+                            <th class="text-center">Export</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         <tr>
+                            <td>Holidays</td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                         </tr>
+                         <tr>
+                            <td>Leaves</td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                         </tr>
+                         <tr>
+                            <td>Clients</td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                         </tr>
+                         <tr>
+                            <td>Projects</td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                         </tr>
+                         <tr>
+                            <td>Tasks</td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                         </tr>
+                         <tr>
+                            <td>Assets</td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" checked=""><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme"><span class="checkmark"></span></label></td>
+                            <td class="text-center"><label class="custom_check"><input type="checkbox" name="rememberme" class="rememberme" checked=""><span class="checkmark"></span></label></td>
+                         </tr>
+                      </tbody>
+                   </table>
+                </div>
+                <div class="submit-section"><button class="btn btn-primary submit-btn">Submit</button></div>
+             </form>
+          </div>
+       </div>
+    </div>
+ </div>
 </html>
