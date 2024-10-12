@@ -19,3 +19,13 @@ document.getElementById('mobile_btn').addEventListener('click', function() {
   const sidebarMenu = document.getElementById('sidebar-menu');
   sidebarMenu.classList.toggle('menu-active'); // Add or remove 'active' class
 });
+// 
+document.addEventListener('DOMContentLoaded', function() {
+  var inputs = document.querySelectorAll('.input-blcok input');
+
+  inputs.forEach(function(input) {
+      input.addEventListener('click', function() {
+          this.classList.toggle('form-focus');
+      });
+  });
+});
