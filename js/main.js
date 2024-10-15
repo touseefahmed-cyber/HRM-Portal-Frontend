@@ -29,3 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  startAnimation();
+  
+  function startAnimation() {
+      document.querySelectorAll('.skills').forEach(function (skillElement) {
+          const skillBar = skillElement.querySelector('.skillbar');
+          const targetWidth = skillElement.getAttribute('data-percent');
+          
+          skillBar.style.transition = "width 4s";
+          skillBar.style.width = targetWidth;
+      });
+  }
+});

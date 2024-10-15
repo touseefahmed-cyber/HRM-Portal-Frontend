@@ -1130,6 +1130,185 @@ a.attendance-avatar {
     font-family: "circular_stdmedium";
   }
 }
+.attendance-timesheet {
+  gap: 15px;
+  display: grid;
+  grid-template-columns: 32.35% 66.5%;
+  margin-bottom: 50px;
+}
+.timesheet-line{
+  border: 1.5px solid #d6d6d6;
+  border-radius: 16px;
+  padding: 26px 22px 20px;
+}
+.timesheet-line{
+  h4{
+    font-size: 20px;
+    line-height: 20px;
+    color: #212529;
+    margin-bottom: 20px;
+    font-family: "circular_stdmedium";
+  }
+}
+
+.skills-box {
+  position: relative;
+  background: #F9F9F9;
+  padding: 13px 16px 17px;
+  border: 1px solid #D6D6D6;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.skills {
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-radius: 0px 10px 10px 0px;
+}
+.title-bar{
+  margin-bottom: 4px;
+}
+.title-bar h5{
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #212529;
+  margin-bottom: 0;
+  font-family: "circular_stdmedium";
+}
+.skills span {
+  float: right;
+  color: #616161;
+  font-size: 14px;
+  margin-top: -22px;
+  font-family: "circular_stdmedium";
+}
+
+.skillbar-box {
+  background: #E0E0E0;
+  border-radius: 10px;
+}
+.skillbar {
+  background-color: #ff3333;
+  width: 0px;
+  height: 6px;
+  border-radius: 10px;
+}
+.skill-box-outer{
+  .skills-box:first-child{
+    .skillbar{
+      background: #FF902F;
+    }
+  }
+  .skills-box:nth-child(2){
+    .skillbar{
+      background: #FFBC34;
+    }
+  }
+  .skills-box:nth-child(3){
+    .skillbar{
+      background: #55CE63;
+    }
+  }
+  .skills-box:nth-child(4){
+    .skillbar{
+      background: #FA2E53;
+    }
+  }
+  .skills-box:last-child{
+    .skillbar{
+      background: #009EFB;
+    }
+  }
+}
+.attendance-search-filter h4{
+  font-size: 24px;
+  line-height: 24px;
+  color: #212529;
+  margin-bottom: 0;
+  font-family: 'circular_stdbold';
+}
+.attendance-search-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.attendance-search-input{
+  width: 30%;
+  ul{
+    gap: 25px;
+    display: flex;
+  }
+  li{
+    width: 100%;
+  }
+}
+.custom-table2 thead th:first-child {
+  border-radius: 15px 0 0 0;
+}
+.custom-table2 thead th:last-child {
+  border-radius: 0 15px 0 0;
+}
+.custom-table2 {
+  border-radius: 15px;
+  border-spacing: 0;
+  border: 1px solid #d3d3d4;
+  border-collapse: separate;
+}
+.custom-table2 thead th {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+  color: #545454;
+  text-align: center;
+  background: #eee9f9;
+  padding: 19px 16px 20px;
+}
+.custom-table2 tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+.custom-table2 tbody tr td {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  padding: 23px 16px 24px;
+  text-align: center;
+}
+.custom-table2 tbody tr:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+.custom-table2 tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 15px;
+}
+.custom-table2 tbody tr:last-child td:last-child {
+  border-radius: 0 0 15px 0;
+}
+.attendance-btn {
+  display: flex;
+  gap: 15px;
+  a{
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 15px;
+    line-height: 15px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 58px;
+    padding: 16px 15px 17px;
+    font-family: 'circular_stdbold';
+  }
+}
+.clock-btn,.start-btn{
+  width: 100%;
+}
+.clock-btn a{
+  background: #FF902F;
+}
+.start-btn a{
+  background: #0764E6;
+}
+
 // MOBILE RESPONSIVE
 @media screen and (max-width: 1440px){
   #sidebar-menu {
@@ -1146,6 +1325,12 @@ a.attendance-avatar {
 .attendance-employee-box ul {
   grid-template-columns: 61% 18% 16.5%;
 }
+.attendance-timesheet {
+  grid-template-columns: 47.35% 51%;
+}
+.attendance-search-input {
+  width: 55%;
+}
 }
 @media screen and (max-width: 1199px){
   .staff-box {
@@ -1157,6 +1342,9 @@ a.attendance-avatar {
 }
 .attendance-employee-box ul {
   grid-template-columns: 54% 22% 18.5%;
+}
+.attendance-timesheet {
+  grid-template-columns: 61.35% 36%;
 }
 
 }
@@ -1285,6 +1473,22 @@ a.attendance-avatar {
 .timeline {
   padding: 26px 22px;
 }
+.attendance-timesheet {
+  margin-bottom: 30px;
+  grid-template-columns: 100%;
+}
+.attendance-search-filter h4{
+  font-size: 20px;
+  line-height: 22px;
+}
+.attendance-search-filter {
+  flex-direction: column;
+  gap: 10px;
+}
+.attendance-search-input {
+  width: 100%;
+}
+
 }
 @media screen and (max-width: 575px) {
   .profile-action .dropdown-menu.show {
@@ -1355,5 +1559,12 @@ a.attendance-avatar {
   padding: 16px 20px;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+.attendance-search-input {
+  width: 100%;
+}
+.attendance-search-input ul {
+  gap: 10px;
+  flex-direction: column;
 }
 }
