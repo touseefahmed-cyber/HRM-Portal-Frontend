@@ -253,7 +253,7 @@
                         <span class="d-block">Today: <br>
                            18th November 2023</span>
                         <div class="leaves-btn">
-                           <a href="#">Request Leave</a>
+                           <a href="#" data-bs-toggle="modal" data-bs-target="#leave_application">Request Leave</a>
                         </div>
                      </div>
                      <!-- leaves-sitting -->
@@ -390,66 +390,68 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
       <script type="module" src="js/main.js"></script>
    </body>
-   <div class="modal custom-modal fade show" id="attendance_info" role="dialog" aria-modal="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+   <div id="leave_application" class="modal custom-modal fade" aria-modal="true" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title">Attendance Info</h5>
+               <h5 class="modal-title">Leave Application</h5>
                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body">
-               <div class="timesheet-box">
-                  <h4>Timesheet <small class="d-inline-block">11 Mar 2023</small></h4>
-                  <div class="puch-det">
-                     <span class="d-inline-block">Punched In at</span>
-                     <small class="d-inline-block">Wed, 11th Mar 2023 10.00 AM</small>
-                  </div>
-                  <div class="working-hour-box">
-                     <div class="working-timer">
-                        <figure class="mb-0">
-                           <img src="images/working-hour-img.png" alt="working-hour-img">
-                        </figure>
-                        <!-- working-timer -->
-                     </div>
-                     <div class="stats-box">
-                        <ul class="list-unstyled mb-0">
-                           <li class="break-box"><span class="d-inline-block">Break</span> <small class="d-inline-block">1.21 hrs</small></li>
-                           <li class="overtime-box"><span class="d-inline-block">Overtime</span> <small class="d-inline-block">3 hrs</small></li>
-                        </ul>
-                     </div>
-                     <!-- working-hour-box -->
-                  </div>
-                  <div class="puch-det punch-out">
-                     <span class="d-inline-block">Punched Out at</span>
-                     <small class="d-inline-block">Wed, 11th Mar 2023 5.00 PM</small>
-                  </div>
-                  <!-- timesheet-box -->
-               </div>
-               <div class="timeline">
-                  <h4>Activity</h4>
-                  <ul class="list-unstyled mb-0">
-                     <li>
-                        <span class="d-block">Punch In at</span>
-                        <small class="d-block"><i class="fa-regular fa-clock"></i>10:00 AM.</small>
-                     </li>
-                     <li>
-                        <span class="d-block">Break Start</span>
-                        <small class="d-block"><i class="fa-regular fa-clock"></i>5:25 PM.</small>
-                     </li>
-                     <li>
-                        <span class="d-block">Break End</span>
-                        <small class="d-block"><i class="fa-regular fa-clock"></i>6:00 PM.</small>
-                     </li>
-                     <li>
-                        <span class="d-block">Break Start</span>
-                        <small class="d-block"><i class="fa-regular fa-clock"></i>7:45 PM.</small>
-                     </li>
-                     <li>
-                        <span class="d-block">Punch Out at</span>
-                        <small class="d-block"><i class="fa-regular fa-clock"></i>8:00 PM.</small>
-                     </li>
+               <div class="leave-details">
+                  <ul class="mb-0">
+                     <li>Annual / Casual leave request for 1-4 days: notice of one working week.</li>
+                     <li>Annual / Casual leave request for 5 days or more: notice of two working weeks.</li>
+                     <li>Sick leave request for same day or more: notice within 24 hours or at the earliest possible convenience. **Submission of medical certificate to hr@topboffin.com** (**to be communicated to HR ASAP**)</li>
+                     <li>Emergency leave request same day or more (subject to nature of the emergency): notice at earliest possible convenience. (**to be communicated to HR ASAP **)</li>
                   </ul>
+                  <ol>
+                     <li>Fill in the required details below to apply for a leave. </li>
+                     <li>Only leaves made in line with Company Policy shall be approved. </li>
+                     <li>Additional to the form, the leave request must be communicated to the HR Manager.</li>
+                     <li>The HR Manager will notify all employees in writing regarding leave approval.</li>
+                     <li>For sick/emergency leaves please notify HR as soon as possible so the client can be informed. </li>
+                  </ol>
                </div>
+               <form>
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Leave From <span class="text-danger">*</span></label>
+                          <input class="form-control" type="date">
+                         </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Leave Till</label>
+                          <input class="form-control" type="date">
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">No of Days <span class="text-danger">*</span></label>
+                          <input class="form-control" type="text">
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Leave Type <span class="text-danger">*</span></label>
+                          <select class="form-control">
+                           <option>Choose</option>
+                           <option>Annual</option>
+                           <option>Emergency</option>
+                          </select>
+                         </div>
+                     </div>
+                     <div class="col-sm-12">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Reason for Leave</label>
+                          <input class="form-control" type="text">
+                         </div>
+                     </div>
+                  </div>
+                  <div class="submit-section"><button class="btn btn-primary submit-btn">Submit</button></div>
+               </form>
             </div>
          </div>
       </div>

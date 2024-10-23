@@ -1697,6 +1697,14 @@ a.attendance-avatar {
       transform: rotate(126deg);
   }
 }
+.leave-details li {
+  font-size: 14px;
+  line-height: 22px;
+  color: #575757;
+}
+.leave-details{
+  margin-bottom: 45px;
+}
 
 // MOBILE RESPONSIVE
 @media screen and (max-width: 1600px){
@@ -1942,6 +1950,9 @@ a.attendance-avatar {
 }
 .employee-leaves-box {
   flex-direction: row;
+}
+.submit-section {
+  margin-top: 20px;
 }
 
 }
