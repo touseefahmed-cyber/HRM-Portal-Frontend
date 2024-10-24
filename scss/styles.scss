@@ -1843,6 +1843,7 @@ a.attendance-avatar {
   color: #7a7c7f;
   width: auto;
   height: auto;
+  display: inline-block !important;
   border-radius: 0;
   border-bottom: 2px solid transparent;
 }
@@ -1855,6 +1856,7 @@ a.attendance-avatar {
   border-radius: 20px;
    border: 1px solid #D6D6D6;
    background: #FFFBFB;
+   position: relative;
    h4{
     font-size: 18px;
     line-height: 18px;
@@ -1878,6 +1880,104 @@ a.attendance-avatar {
   font-weight: 700;
   margin-bottom: 20px;
 }
+.profile-table th,.profile-table td {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 17px 10px;
+  background: transparent;
+}
+.profile-table th {
+
+  font-weight: 600;
+  border-top: 2px solid #eae8e9;
+  border-bottom: 2px solid #eae8e9;
+}
+.profile-table td{
+  border-bottom: 2px solid #eae8e9;
+}
+.profile-table .profile-action{
+  top: 0;
+  left: 0;
+  position: relative;
+}
+.profile-table .profile-action .dropdown-menu.show{
+  top: inherit !important;
+  left: inherit !important;
+  width: 100%;
+  height: fit-content;
+}
+.profile-timeline ul{
+  position: relative;
+}
+.profile-timeline ul::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4px;
+  border-left: 2px solid #D5D8DA;
+}
+.profile-timeline ul li::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  z-index: 2;
+  background: #D5D8DA;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: -28px;
+}
+.profile-timeline ul li {
+  position: relative;
+  margin-left: 28px;
+  margin-bottom: 27px;
+  background: #FFFF;
+  padding: 15px;
+  width: 70%;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.profile-timeline ul li {
+  h6{
+    font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  color: #646669;
+  margin-bottom: 10px;
+  }
+  span{
+    font-size: 14px;
+    line-height: 14px;
+    color: #909294;
+    margin-bottom: 10px;
+  }
+  small{
+    font-size: 12px;
+    line-height: 12px;
+    color: #BCBEBF;
+  }
+
+}
+.edit-icon{
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ecedee;
+  border: 1px solid #e2e4e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  a{
+    color: #BCBEBF;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
 // MOBILE RESPONSIVE
 @media screen and (max-width: 1600px){
   .leaves-input-box ul {
@@ -1895,6 +1995,9 @@ a.attendance-avatar {
  .employee-leaves-box {
   gap: 15px;
   padding: 16px 10px;
+}
+.profile-view {
+  gap: 20%;
 }
 }
 @media screen and (max-width: 1440px){
@@ -1934,6 +2037,31 @@ a.attendance-avatar {
 .employee-leaves-box {
   flex-direction: column;
 }
+.profile-view {
+  gap: 60px;
+  justify-content: space-between;
+}
+.personal-rt-info {
+  padding-left: 30px;
+}
+.profile-view .personal-info .title {
+  width: 30%;
+}
+.generictab-box .personal-info .title {
+  width: 75%;
+}
+.generictab-box {
+  padding: 24px;
+}
+.profile-table th{
+  font-size: 12px;
+  line-height: 14px;
+  padding: 17px 10px;
+  background: rgba(0, 0, 0, 0);
+}
+.profile-timeline ul li {
+  width: 90%;
+}
 
 }
 @media screen and (max-width: 1199px){
@@ -1958,6 +2086,20 @@ a.attendance-avatar {
 }
 .leaves-input-box {
   margin-bottom: 45px;
+}
+.profile-view {
+  gap: 20px;
+  flex-direction: column;
+}
+.personal-rt-info {
+  padding-left: 0;
+  border-left: 0;
+  border-top: 2px dotted #d6d6d6;
+  padding-top: 20px;
+}
+.tab-con #pills-home {
+  gap: 20px;
+  grid-template-columns: 100%;
 }
 
 }
@@ -2126,7 +2268,10 @@ a.attendance-avatar {
 .submit-section {
   margin-top: 20px;
 }
-
+.user-name {
+  font-size: 20px;
+  line-height: 20px;
+}
 
 }
 @media screen and (max-width: 575px) {
@@ -2213,5 +2358,37 @@ a.attendance-avatar {
 .count-value {
   font-size: 30px;
   line-height: 30px;
+}
+.profile-img-wrap {
+  gap: 15px;
+  flex-direction: column;
+  text-align: center;
+}
+.profile-img figure {
+  margin: 0 auto;
+}
+.profile-main-table{
+  display: block;
+  overflow: auto;
+  table{
+    width: 500px;
+  }
+}
+.edit-icon {
+  top: 20px;
+  right: 20px;
+}
+.personal-info .text {
+  font-size: 12px;
+  line-height: 16px;
+  width: 60%;
+}
+.profile-view .personal-info .title {
+  width: 40%;
+}
+.tab-con #pills-tab {
+  gap: 10px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 }
