@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+      <link rel="stylesheet" href="css/styles.css">
+      <title>Splash Screen</title>
+   </head>
+   <body>
+      <!-- DASHBOARD -->
+      <div class="dashboard-header w-100 float-start">
+         <div class="dashboard-header-box">
+            <a id="mobile_btn" class="mobile_btn d-lg-none" href="javascript:void(0)"><i class="fa-solid fa-bars"></i></a>
+            <div class="header-logo">
+               <figure class="mb-0">
+                  <img src="images/topboffin-white-logo.svg" alt="topboffin-white-logo">
+               </figure>
+               <!-- header-logo -->
+            </div>
+            <div class="header-menu">
+               <ul class="list-unstyled mb-0">
+                  <li>
+                     <form class="search-bar position-relative">
+                        <input type="text" placeholder="Search here">
+                        <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                     </form>
+                  </li>
+                  <li class="position-relative nav-link">
+                      <small class="d-inline-block">3</small>
+                      <a href="javascript:;" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                         <i class="fa-regular fa-bell"></i>
+                      </a>
+                      <div class="dropdown-menu notifications">
+                        <div class="topnav-dropdown-header"><span class="notification-title">Notifications</span><a href="javascript:void(0)" class="clear-noti"> Clear All </a></div>
+                        <div class="noti-content">
+                           <ul class="notification-list">
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                       <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
+                                          <p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                        <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">Tarah Shropshire</span> changed the task name <span class="noti-title">Appointment booking with payment gateway</span></p>
+                                          <p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                        <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">Misty Tison</span> added <span class="noti-title">Domenic Houston</span> and <span class="noti-title">Claire Mapes</span> to project <span class="noti-title">Doctor available module</span></p>
+                                          <p class="noti-time"><span class="notification-time">8 mins ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                        <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">Rolland Webber</span> completed task <span class="noti-title">Patient and Doctor video conferencing</span></p>
+                                          <p class="noti-time"><span class="notification-time">12 mins ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="notification-message">
+                                 <a href="#">
+                                    <div class="chat-block d-flex">
+                                        <figure class="mb-0"><img src="images/notification-img1.jpg" alt="User Image"></figure>
+                                       <div class="media-body flex-grow-1">
+                                          <p class="noti-details"><span class="noti-title">Bernardo Galaviz</span> added new task <span class="noti-title">Private chat module</span></p>
+                                          <p class="noti-time"><span class="notification-time">2 days ago</span></p>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="topnav-dropdown-footer"><a href="#">View all Notifications</a></div>
+                     </div>
+                   </li>
+                  <li class="position-relative nav-link">
+                    <small class="d-inline-block">3</small>
+                    <a href="javascript:;" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-comment"></i></a>
+                        <div class="dropdown-menu notifications" data-popper-placement="bottom-end">
+                            <div class="topnav-dropdown-header"><span class="notification-title">Messages</span><a href="javascript:void(0)" class="clear-noti"> Clear All </a></div>
+                            <div class="noti-content">
+                               <ul class="notification-list">
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left">
+                                            <figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure>
+                                            </div>
+                                           <div class="list-body">
+                                              <span class="message-author">Richard Miles </span><span class="message-time">12:28 AM</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left"><figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure></div>
+                                           <div class="list-body">
+                                              <span class="message-author">John Doe</span><span class="message-time">6 Mar</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left"><figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure></div>
+                                           <div class="list-body">
+                                              <span class="message-author"> Tarah Shropshire </span><span class="message-time">5 Mar</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left"><figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure></div>
+                                           <div class="list-body">
+                                              <span class="message-author">Mike Litorus</span><span class="message-time">3 Mar</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                                  <li class="notification-message">
+                                     <a href="#">
+                                        <div class="list-item">
+                                           <div class="list-left"><figure class="mb-0"><img src="images/avatar.jpg" alt="User Image"></figure></div>
+                                           <div class="list-body">
+                                              <span class="message-author"> Catherine Manseau </span><span class="message-time">27 Feb</span>
+                                              <div class="clearfix"></div>
+                                              <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                           </div>
+                                        </div>
+                                     </a>
+                                  </li>
+                               </ul>
+                            </div>
+                            <div class="topnav-dropdown-footer"><a href="#">View all Messages</a></div>
+                         </div>
+                    </li>
+                  <li class="nav-item dropdown">
+                     <a class="dropdown-toggle person-name" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="user-img position-relative">
+                            <img src="images/avatar.png" class="img-fluid" alt="avatar"> 
+                            <span class="status online"></span>
+                        </div>
+                     <span class="d-inline-block">Admin</span>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                     </div>
+                  </li>
+               </ul>
+               <!-- header-maenu -->
+            </div>
+            <!-- dashboard-header-box -->
+         </div>
+         <!-- dashboard-header -->
+      </div>
+      <div class="dashboard-box w-100 float-start">
+        <div id="sidebar-menu">
+            <ul class="sidebar-vertical list-unstyled mb-0">
+                <li class="menu-title"><span>Main</span></li>
+                <li><a href="#"><i class="la la-dashcube"></i></i><span>Dashboard</span></a></li>
+                <li><a href="#"><i class="la la-cube"></i><span>Apps</span></a></li>
+                <li class="menu-title"><span>Employees</span></li>
+                <li><a href="#" class="noti-dot active"><i class="la la-user"></i><span>Employees</span></a></li>
+                <li><a href="#"><i class="la la-users"></i><span>Clients</span></a></li>
+                <li><a href="#"><i class="la la-rocket"></i><span>Projects</span></a></li>
+                <li><a href="#"><i class="la la-ticket"></i><span>Tickets</span></a></li>
+                <li class="menu-title"><span>CRM</span><small class="newly-added-features">New</small></li>
+                <li><a href="#"><i class="la la-user-shield"></i><span>Contacts</span></a></li>
+                <li><a href="#"><i class="la la-building"></i><span>Companies</span></a></li>
+                <li><a href="#"><i class="la la-cubes"></i><span>Deals</span></a></li>
+                <li><a href="#"><i class="la la-chart-area"></i><span>Leads</span></a></li>
+                <li><a href="#"><i class="la la-exchange-alt"></i><span> Pipeline</span></a></li>
+                <li><a href="#"><i class="la la-user-secret"></i><span>Analytics</span></a></li>
+                <li><a href="#" ><i class="la la-directions"></i><span>Activities</span></a></li>
+                <li class="menu-title"><span>HR</span></li>
+                <li><a href="#"><i class="la la-files-o"></i><span>Sales</span></a></li>
+                <li><a href="#"><i class="la la-files-o"></i><span>Accounting</span></a></li>
+                <li><a href="#"><i class="la la-money"></i><span>Payroll</span></a></li>
+                <li><a href="#"><i class="la la-file-pdf-o"></i><span>Policies</span></a></li>
+                <li><a href="#"><i class="la la-pie-chart"></i><span>Reports</span></a></li>
+                <li class="menu-title"><span>Performance</span></li>
+                <li><a href="#"><i class="la la-graduation-cap"></i><span>Performance</span></a></li>
+                <li><a href="#"><i class="la la-box"></i><span>Goals</span></a></li>
+                <li><a href="#"><i class="la la-edit"></i><span>Training</span></a></li>
+                <li><a href="#" ><i class="la la-bullhorn"></i><span>Promotion</span></a></li>
+                <li><a href="#" ><i class="la la-external-link-square"></i><span>Resignation<span></a></li>
+                <li><a href="#"><i class="la la-times-circle"></i><span>Termination</span></a></li>
+            </ul>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="content-header">
+                    <div class="page-title">
+                        <h1>Salary Slip</h1>
+                            <ol class="breadcrumb mb-0">
+                              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Payroll</li>
+                            </ol>
+                    </div>
+                    <!-- content-header -->
+                </div>
+                <div class="salary-con">
+                  <div class="salary-title">
+                     <h3>SALARY SLIP</h3>
+                     
+                     <!-- salary-title -->
+                  </div>
+                  <div class="salary-top-bar">
+                     <div class="topboffin-logo">
+                        <figure class="mb-0">
+                           <img src="images/topboffin-logo2.svg" alt="topboffin-logo">
+                        </figure>
+                        <small class="d-block">TopBoffin (SMC-PVT.) <br> LTD.</small>
+                     </div>
+                     <div class="salary-details">
+                        <span class="d-block salary-code">SALARY SLIP #49029</span>
+                        <small class="d-block salary-date">SALARY Month: March, 2023</small>
+                     </div>
+                     <!-- salary-top-bar -->
+                  </div>
+                  <div class="employee-info">
+                     <div class="employee-info-item">
+                        <h6>Boffin Name</h6>
+                        <ul class="list-unstyled mb-0">
+                           <li>Designation Here</li>
+                           <li>Employee ID: 0003</li>
+                           <li>Joining Date: 12 Jan 22</li>
+                        </ul>
+                     </div>
+                     <div class="employee-info-item">
+                        <ul class="list-unstyled mb-0">
+                           <li>Employee CNIC: xxxxx-xxxxxxx-x</li>
+                           <li>Employee Address: Personal Address</li>
+                           <li>Employee Email ID: Email address</li>
+                        </ul>
+                     </div>
+                     <div class="employee-info-item total-details">
+                        <ul class="list-unstyled mb-0">
+                           <li><span class="d-inline-block">Total Days:</span><span class="d-inline-block">22</span></li>
+                           <li><span class="d-inline-block">Days Worked:</span><span class="d-inline-block">24</span></li>
+                           <li><span class="d-inline-block">Additional Days:</span><span class="d-inline-block">2</span></li>
+                           <li><span class="d-inline-block">LWOP:</span><span class="d-inline-block">0</span></li>
+                        </ul>
+                     </div>
+                     <!-- employee-info -->
+                  </div>
+                  <div class="salary-details-box">
+                     <div class="salary-info">
+                        <ul class="list-unstyled mb-0">
+                           <li><span class="d-inline-block">Basic Salary:</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Bonus:</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Medical Allowance:</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Other Rewards/ Overtime:</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Unpaid Leaves:</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Taxable Income:</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Total Gross Salary:</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Witholding Tax:</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Any Other Deductions:</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Total Deductions</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                           <li><span class="d-inline-block">Net Payable</span><span class="d-inline-block">Rs. xxxxx</span></li>
+                        </ul>
+                     </div>
+                     <div class="payment-details">
+                        <div class="payment-inner-details">
+                           <ul class="list-unstyled mb-0">
+                              <li><span class="d-inline-block">Payment Date</span><span class="d-inline-block">August 1, 2023</span></li>
+                              <li><span class="d-inline-block">Payment Mode</span><span class="d-inline-block">Bank Transfer</span></li>
+                              <li><span class="d-inline-block">Bank Name</span><span class="d-inline-block">Bank Name</span></li>
+                              <li><span class="d-inline-block">Bank Account Name</span><span class="d-inline-block">A/C TITLE</span></li>
+                              <li><span class="d-inline-block">Bank Account #</span><span class="d-inline-block">A/C number</span></li>
+                              <li><span class="d-inline-block">Branch Address</span><span class="d-inline-block">Plot #4,Block R,M.M Alam Road,<br> Main Boulevard, Lahore - Pakistan</span></li>
+                              <li><span class="d-inline-block">Branch Code</span><span class="d-inline-block">9516</span></li>
+                           </ul>
+                        </div>
+                        <div class="total-salary-box">
+                           <div class="hr-signature">
+                              <span class="d-block">Issued by: HR Manager</span>
+                              <div class="hr-signature-txt">Adam Kamran Kureshi</div>
+                           </div>
+                           <div class="total-salary-btn">
+                              <a href="#">PKR 188,750</a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- salary-details -->
+                  </div>
+                  <!-- salary-con -->
+               </div>
+            </div>
+            <!-- dashboard-content -->
+        </div>
+        <!-- side-bar -->
+        <!-- dashboard-box -->
+      </div>
+      <!-- DASHBOARD -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka9QInN8/DkDOFwp5kCjQVz8HldFF47KKhbHQMF4J/54InwEMFIEFFxkpaV40ld" crossorigin="anonymous"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      <script type="module" src="js/main.js"></script>
+   </body>
+   <div class="modal custom-modal fade show" id="attendance_info" role="dialog" aria-modal="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Attendance Info</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="timesheet-box">
+                  <h4>Timesheet <small class="d-inline-block">11 Mar 2023</small></h4>
+                  <div class="puch-det">
+                     <span class="d-inline-block">Punched In at</span>
+                     <small class="d-inline-block">Wed, 11th Mar 2023 10.00 AM</small>
+                  </div>
+                  <div class="working-hour-box">
+                     <div class="working-timer">
+                        <figure class="mb-0">
+                           <img src="images/working-hour-img.png" alt="working-hour-img">
+                        </figure>
+                        <!-- working-timer -->
+                     </div>
+                     <div class="stats-box">
+                        <ul class="list-unstyled mb-0">
+                           <li class="break-box"><span class="d-inline-block">Break</span> <small class="d-inline-block">1.21 hrs</small></li>
+                           <li class="overtime-box"><span class="d-inline-block">Overtime</span> <small class="d-inline-block">3 hrs</small></li>
+                        </ul>
+                     </div>
+                     <!-- working-hour-box -->
+                  </div>
+                  <div class="puch-det punch-out">
+                     <span class="d-inline-block">Punched Out at</span>
+                     <small class="d-inline-block">Wed, 11th Mar 2023 5.00 PM</small>
+                  </div>
+                  <!-- timesheet-box -->
+               </div>
+               <div class="timeline">
+                  <h4>Activity</h4>
+                  <ul class="list-unstyled mb-0">
+                     <li>
+                        <span class="d-block">Punch In at</span>
+                        <small class="d-block"><i class="fa-regular fa-clock"></i>10:00 AM.</small>
+                     </li>
+                     <li>
+                        <span class="d-block">Break Start</span>
+                        <small class="d-block"><i class="fa-regular fa-clock"></i>5:25 PM.</small>
+                     </li>
+                     <li>
+                        <span class="d-block">Break End</span>
+                        <small class="d-block"><i class="fa-regular fa-clock"></i>6:00 PM.</small>
+                     </li>
+                     <li>
+                        <span class="d-block">Break Start</span>
+                        <small class="d-block"><i class="fa-regular fa-clock"></i>7:45 PM.</small>
+                     </li>
+                     <li>
+                        <span class="d-block">Punch Out at</span>
+                        <small class="d-block"><i class="fa-regular fa-clock"></i>8:00 PM.</small>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</html>

@@ -1978,6 +1978,128 @@ a.attendance-avatar {
     text-decoration: none;
   }
 }
+.salary-con{
+  border-radius: 18px;
+  border: 2px solid #D6D6D6;
+  padding: 30px 40px 50px;
+}
+.salary-title h3 {
+  color: #212529;
+  font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+.topboffin-logo small{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #454545;
+}
+.salary-top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.salary-details span{
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 5px;
+}
+.salary-details small{
+  color: #616161;
+}
+.employee-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: end;
+  border: 2px solid #F0F0F0;
+  padding: 15px;
+  border-radius: 5px;
+}
+.employee-info-item h6{
+  font-size: 18px;
+  line-height: 18px;
+  color: #212529;
+  font-weight:600;
+  margin-bottom: 20px;
+}
+.employee-info-item ul li{
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #616161;
+}
+.total-details li span:first-child {
+  width: 220px;
+}
+.salary-details-box {
+  display: grid;
+  grid-template-columns: 49.5% 49.5%;
+  gap: 15px;
+  justify-content: space-between;
+}
+.salary-info,.payment-inner-details {
+  border: 2px solid #F0F0F0;
+  border-radius: 4px;
+}
+.salary-info ul li,.payment-inner-details ul li{
+  font-size: 18px;
+  line-height: 18px;
+  color: #616161;
+  font-weight: 500;
+  padding: 7px 15px;
+  border: 2px solid #F0F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hr-signature span{
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 10px;
+}
+.hr-signature-txt{
+  font-size: 18px;
+  line-height: 20px;
+  color: #434343;
+  font-style: oblique;
+  font-weight: 300;
+}
+.total-salary-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total-salary-btn a{
+  font-size: 30px;
+  line-height: 30px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fcfcfc;
+  box-shadow: 0 0 13px rgb(0 0 0 / 5%);
+  background: #81bf7e;
+  font-weight: 700;
+  padding: 28px 30px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+.payment-inner-details {
+  margin-bottom: 40px;
+}
+.total-salary-btn {
+  width: 63.5%;
+}
+.attendance-employee-box .search-icon input {
+  background: url(../images/search-icon.svg) no-repeat 2% 48%;
+}
 // MOBILE RESPONSIVE
 @media screen and (max-width: 1600px){
   .leaves-input-box ul {
@@ -1998,6 +2120,14 @@ a.attendance-avatar {
 }
 .profile-view {
   gap: 20%;
+}
+.total-salary-btn a {
+  font-size: 28px;
+  line-height: 28px;
+  padding: 22px 20px;
+}
+.total-salary-btn {
+  width: 46.5%;
 }
 }
 @media screen and (max-width: 1440px){
@@ -2062,6 +2192,30 @@ a.attendance-avatar {
 .profile-timeline ul li {
   width: 90%;
 }
+.employee-info-item ul li {
+  font-size: 16px;
+  line-height: 22px;
+}
+.salary-info ul li, .payment-inner-details ul li {
+  font-size: 16px;
+  line-height: 16px;
+}
+.hr-signature span {
+  font-size: 18px;
+  line-height: 18px;
+}
+.total-salary-btn a {
+  font-size: 22px;
+  line-height: 22px;
+  padding: 19px 10px;
+}
+.hr-signature span {
+  font-size: 16px;
+  line-height: 16px;
+}
+.hr-signature-txt {
+  font-size: 16px;
+}
 
 }
 @media screen and (max-width: 1199px){
@@ -2099,6 +2253,37 @@ a.attendance-avatar {
 }
 .tab-con #pills-home {
   gap: 20px;
+  grid-template-columns: 100%;
+}
+.salary-title h3{
+  font-size: 24px;
+  line-height: 26px;
+}
+.salary-details span {
+  font-size: 20px;
+  line-height: 20px;
+}
+.salary-con {
+  padding: 30px 20px 50px;
+}
+.total-details li span:first-child {
+  width: 140px;
+}
+.employee-info-item ul li {
+  font-size: 14px;
+  line-height: 20px;
+}
+.employee-info-item h6{
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.salary-info ul li, .payment-inner-details ul li {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 7px 5px;
+}
+.salary-details-box {
   grid-template-columns: 100%;
 }
 
@@ -2170,8 +2355,14 @@ a.attendance-avatar {
 .employee-details-box {
   margin-bottom: 30px;
 }
+
 }
 @media screen and (max-width: 767px) {
+  .employee-info {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
   .search-employee-box ul {
     grid-template-columns: 47.6% 47.6%;
   }
@@ -2275,6 +2466,16 @@ a.attendance-avatar {
 
 }
 @media screen and (max-width: 575px) {
+  .salary-con {
+    padding: 30px 20px;
+}
+  .total-salary-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
   .profile-action .dropdown-menu.show {
     right: auto !important;
     left: auto !important;
@@ -2390,5 +2591,21 @@ a.attendance-avatar {
   gap: 10px 20px;
   flex-wrap: wrap;
   justify-content: center;
+}
+.salary-top-bar {
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.total-salary-btn {
+  width: 100%;
+}
+.total-salary-btn a {
+  font-size: 18px;
+  line-height: 20px;
+  padding: 17px 10px;
+}
+.salary-details span {
+  font-size: 18px;
 }
 }
