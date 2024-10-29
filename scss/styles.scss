@@ -94,8 +94,8 @@ $light-grey-color: #ECECEC;
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
 @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
@@ -138,7 +138,15 @@ body{
   font-family: "Montserrat", sans-serif;
   color: rgb(255 255 255 / 50%);
 }
-
+.register-form{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: $primary-color;
+}
 .login-form-con {
   width: 100%;
   height: 100vh;
@@ -412,13 +420,89 @@ body{
   position: relative;
   &::after{
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: #55ce63;
     position: absolute;
-    top: 0;
+    top:5px;
     right: 0;
     border-radius: 50%;
+    animation: spineer 2s infinite;
+  }
+}
+.custom-table2 .profile-action{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.status-box {
+  position: relative;
+  border: 1px solid #d3d3d4;
+  color: #373b3e;
+  font-size: 13px;
+  line-height: 13px;
+  padding: 7px 27px 8px 37px;
+  border-radius: 50px;
+  width: max-content;
+  margin: 0 auto;
+}
+.status-box:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 9px;
+  height: 9px;
+  background: #B993D8;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  outline: 1px solid #B993D8;
+  outline-offset: 2px;
+}
+.approved-box figure {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
+.approved:after{
+  background: #80BF7E;
+  outline: 1px solid #80BF7E;
+}
+.declined:after{
+  background: #EF2020;
+  outline: 1px solid #EF2020;
+}
+.new:after{
+  background: #14A5FC;
+  outline: 1px solid #14A5FC;
+}
+.approved-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+.request-leave-tab .custom-table2 tbody tr td{
+  vertical-align: middle;
+}
+@-webkit-keyframes spineer {
+  from {
+   box-shadow: 0 0 0 0 rgba(85, 206, 99, .99)
+  }
+   to {
+    box-shadow: 0 0 0 10px rgba(85, 206, 99, .01)
+   }
+  }    
+  @keyframes spineer {
+  from {
+   box-shadow: 0 0 0 0 rgba(85, 206, 99, .99)
+  }
+  to {
+   box-shadow: 0 0 0 10px rgba(85, 206, 99, .01)
   }
 }
 #sidebar-menu::-webkit-scrollbar {
@@ -1843,9 +1927,41 @@ a.attendance-avatar {
   color: #7a7c7f;
   width: auto;
   height: auto;
+  background: transparent;
   display: inline-block !important;
   border-radius: 0;
   border-bottom: 2px solid transparent;
+}
+.tab-top-bar{
+  position: relative;
+}
+.request-submit-btn {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+.request-submit-btn a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 12px 26px 13px;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+.request-leave-tab #pills-tab {
+  border-radius: 10px;
+  padding: 12px 20px 13px;
+}
+.approved-btn{
+  background: #55ce63;
+}
+.rejected-btn{
+  background: #ff9b44;
 }
 .tab-con #pills-tab .nav-link.active{
   color: #000;
@@ -2100,6 +2216,197 @@ a.attendance-avatar {
 .attendance-employee-box .search-icon input {
   background: url(../images/search-icon.svg) no-repeat 2% 48%;
 }
+//  multistep form
+#msform {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+#msform fieldset {
+  box-sizing: border-box;
+  width: 100%;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea,#msform select {
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+#msform input:focus, #msform textarea:focus,#msform select {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid transparent;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+
+#msform .action-button:focus{
+  border: none;
+}
+/*buttons*/
+#msform .action-button {
+  background: #4230f4;
+  font-weight: bold;
+  color: #fff;
+  border: 0 none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 17px 5px;
+  width: 100%;
+}
+
+
+#msform .action-button-previous {
+  width: 100px;
+  background: #aCbEd0;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #aCbEd0;
+}
+
+/*headings*/
+.fs-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  counter-reset: step;
+  padding-left: 0;
+}
+
+#progressbar li {
+  list-style-type: none;
+  color: #666;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+#progressbar li:before {
+  content: "";
+  counter-increment: step;
+  width: 24px;
+  height: 24px;
+  line-height: 26px;
+  display: block;
+  font-size: 12px;
+  color: #333;
+  background: white;
+  border-radius: 25px;
+  margin: 0 auto 10px auto;
+  z-index: 1;
+  position: relative;
+}
+#progressbar .completed-form::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  background: rgba(0, 0, 0, 0);
+  width: auto;
+  height: auto;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  top: -4px;
+  left: 0;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 95%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+}
+.active span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4230f4;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -150%);
+  left: 50%;
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+
+/*marking active/completed steps blue*/
+/*The number of the step and the connector before it = blue*/
+#progressbar li.active:before, #progressbar li.active:after {
+  color: white;
+}
+.register-form-con {
+  width: 706px;
+}
+#msform fieldset ul li label {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+#msform fieldset ul{
+  margin-bottom: 30px;
+}
+#msform fieldset ul li {
+  margin-bottom: 20px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
 // MOBILE RESPONSIVE
 @media screen and (max-width: 1600px){
   .leaves-input-box ul {
@@ -2131,6 +2438,18 @@ a.attendance-avatar {
 }
 }
 @media screen and (max-width: 1440px){
+  .register-form {
+    padding-top: 60px;
+}
+#progressbar {
+  margin-bottom: 20px;
+}
+  .request-leave-tab .custom-table2 tbody tr td {
+    padding: 23px 6px 24px;
+  }
+  .request-leave-tab .custom-table2 thead th {
+    padding: 19px 6px 20px;
+  }
   #sidebar-menu {
     top: 94px;
     width: 230px;
@@ -2219,6 +2538,12 @@ a.attendance-avatar {
 
 }
 @media screen and (max-width: 1199px){
+  .request-leave-tab #pills-tab {
+    gap: 10px;
+}
+  .request-leave-tab .custom-table2{
+    width: 1000px;
+  }
   .staff-box {
     gap: 24px;
     grid-template-columns: repeat(3, 1fr);
@@ -2355,9 +2680,32 @@ a.attendance-avatar {
 .employee-details-box {
   margin-bottom: 30px;
 }
+.request-submit-btn a {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 12px 22px 13px;
+}
 
 }
 @media screen and (max-width: 767px) {
+  .request-leave-tab #pills-tab .nav-link {
+    padding: 8px 10px;
+    font-size: 13px;
+    line-height: 20px;
+    border: none;
+    color: #7a7c7f;
+    width: auto;
+    height: auto;
+    background: rgba(0, 0, 0, 0);
+    display: inline-block !important;
+    border-radius: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+  .request-submit-btn a {
+    padding: 12px 12px 13px;
+    font-size: 12px;
+    line-height: 11px;
+}
   .employee-info {
     flex-direction: column;
     gap: 15px;
@@ -2462,6 +2810,16 @@ a.attendance-avatar {
 .user-name {
   font-size: 20px;
   line-height: 20px;
+}
+.register-form-con {
+  width: 100%;
+}
+.register-form {
+  padding: 50px 15px;
+  
+}
+.register-form > figure img {
+  width: 400px;
 }
 
 }
@@ -2607,5 +2965,16 @@ a.attendance-avatar {
 }
 .salary-details span {
   font-size: 18px;
+}
+.request-submit-btn {
+  position: relative;
+  top: 0;
+  transform: translateY(0);
+  right: 0;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.register-form > figure img {
+  width: 300px;
 }
 }

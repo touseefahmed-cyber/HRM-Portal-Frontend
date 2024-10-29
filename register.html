@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="register-form">
+        <figure>
+            <img src="images/topboffin-logo.svg" alt="topboffin-logo">
+        </figure>
+        <div class="register-form-con">
+<!-- MultiStep Form -->
+        <form id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active"><span class="d-inline-block"></span></li>
+                <li><span class="d-inline-block"></span></li>
+                <li><span class="d-inline-block"></span></li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+                <ul class="list-unstyled">
+                    <li>
+                        <label>Username</label>
+                        <input type="text" name="fname" placeholder="Enter your Username"/>
+                    </li>
+                    <li>
+                        <label>Email</label>
+                        <input type="text" name="lname" placeholder="Last Name"/>
+                    </li>
+                    <li>
+                        <label>Compant Name</label>
+                        <input type="text" name="phone" placeholder="Phone"/>
+                    </li>
+                    <li>
+                        <label>Gender</label>
+                        <select>
+                            <option>Select Gender</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                        </select>
+                    </li>
+                </ul>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <ul class="list-unstyled">
+                    <li>
+                        <label>Website URL</label>
+                        <input type="text" name="website" placeholder="Enter your company website url"/>
+                    </li>
+                    <li>
+                        <label>Contact Number</label>
+                        <input type="phone" name="number" placeholder="Enter your Contact Number"/>
+                    </li>
+                    <li>
+                        <label>Address</label>
+                        <input type="text" name="address" placeholder="Enter your address"/>
+                    </li>
+                </ul>
+                <!-- <input type="button" name="previous" class="previous action-button-previous" value="Previous"/> -->
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <ul class="list-unstyled">
+                    <li>
+                        <label>Website URL</label>
+                        <input type="text" name="website" placeholder="Enter your company website url"/>
+                    </li>
+                    <li>
+                        <label>Contact Number</label>
+                        <input type="phone" name="number" placeholder="Enter your Contact Number"/>
+                    </li>
+                    <li>
+                        <label>Address</label>
+                        <input type="text" name="address" placeholder="Enter your address"/>
+                    </li>
+                </ul>
+                <!-- <input type="button" name="previous" class="previous action-button-previous" value="Previous"/> -->
+                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+            </fieldset>
+        </form>
+<!-- /.MultiStep Form -->
+        </div>
+        <!-- register-form -->
+    </div>
+    <script type="module" src="js/main.js"></script>
+    <script>
+        let current_fs, next_fs, previous_fs; // Fieldsets
+let left, opacity; // Fieldset properties which we will animate
+let animating; // Flag to prevent quick multi-click glitches
+
+document.querySelectorAll(".next").forEach(button => {
+  button.addEventListener("click", function() {
+    if (animating) return false;
+    animating = true;
+
+    current_fs = this.parentNode;
+    next_fs = current_fs.nextElementSibling;
+
+    // Activate next step on progress bar using the index of next_fs
+    const index = Array.from(document.querySelectorAll("fieldset")).indexOf(next_fs);
+    document.querySelectorAll("#progressbar li")[index].classList.add("active");
+
+    if (index > 0) {
+        document.querySelectorAll("#progressbar li")[index - 1].classList.remove("active");
+        document.querySelectorAll("#progressbar li")[index - 1].classList.add("completed-form");
+    }
+
+    // Show the next fieldset
+    next_fs.style.display = "block";
+
+    // Animate the transition
+    let opacityValue = 1;
+    let leftValue = 50;
+
+    const animation = setInterval(() => {
+      opacityValue -= 0.05;
+      leftValue -= 2.5;
+
+      current_fs.style.opacity = opacityValue;
+      current_fs.style.position = "absolute";
+      next_fs.style.left = `${leftValue}%`;
+      next_fs.style.opacity = 1 - opacityValue;
+
+      if (opacityValue <= 0) {
+        clearInterval(animation);
+        current_fs.style.display = "none";
+        animating = false;
+      }
+    }, 40);
+  });
+});
+
+document.querySelectorAll(".previous").forEach(button => {
+  button.addEventListener("click", function() {
+    if (animating) return false;
+    animating = true;
+
+    current_fs = this.parentNode;
+    previous_fs = current_fs.previousElementSibling;
+
+    // Deactivate current step on progress bar
+    const index = Array.from(document.querySelectorAll("fieldset")).indexOf(current_fs);
+    document.querySelectorAll("#progressbar li")[index].classList.remove("active");
+
+    // Show the previous fieldset
+    previous_fs.style.display = "block";
+
+    // Animate the transition
+    let opacityValue = 1;
+    let leftValue = 0;
+
+    const animation = setInterval(() => {
+      opacityValue -= 0.05;
+      leftValue += 2.5;
+
+      current_fs.style.left = `${leftValue}%`;
+      previous_fs.style.opacity = 1 - opacityValue;
+
+      if (opacityValue <= 0) {
+        clearInterval(animation);
+        current_fs.style.display = "none";
+        animating = false;
+      }
+    }, 40);
+  });
+});
+
+document.querySelector(".submit").addEventListener("click", function() {
+  return false;
+});
+
+
+    </script>
+</body>
+</html>
