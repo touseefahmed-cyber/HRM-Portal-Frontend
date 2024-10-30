@@ -2407,6 +2407,26 @@ a.attendance-avatar {
     margin-bottom: 0;
   }
 }
+.disabled{
+  opacity: 0.65;
+cursor: not-allowed;
+}
+.working-timer{
+  .progress {
+    width: 155px;
+    height: 155px;
+ }
+ .progress:after {
+  border: 14px solid #B9E9B7;;
+  }
+  .progress .progress-bar {
+    border-width: 14px;
+}
+.progress .progress-value {
+  transform: translate(-26%, -50%);
+  width: 100%;
+}
+}
 // MOBILE RESPONSIVE
 @media screen and (max-width: 1600px){
   .leaves-input-box ul {
@@ -2824,6 +2844,12 @@ a.attendance-avatar {
 
 }
 @media screen and (max-width: 575px) {
+  .working-timer .progress .progress-value {
+    transform: translate(-50%, -50%);
+  }
+  .working-timer{
+    margin: 0 auto;
+  }
   .salary-con {
     padding: 30px 20px;
 }
